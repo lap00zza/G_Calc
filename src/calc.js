@@ -108,3 +108,15 @@ calc.addEventListener("click", function () {
   // WARNING: eval() is a very dangerous function
   io_area.innerText = eval(currentValue);
 });
+
+function gst(n1) {
+  n1 = Number(n1);
+  var gst_rate = 0.18;
+  var r = n1 * gst_rate + n1;
+  return r;
+}
+
+btnGst.addEventListener("click", function () {
+  var currentValue = io_area.innerText;
+  io_area.innerText = gst(currentValue);
+});
